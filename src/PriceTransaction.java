@@ -1,4 +1,9 @@
 
+/**
+ * PriceTransaction: "glob glob Silver is 34 Credits". This class processes the transaction.
+ * @author Mert
+ *
+ */
 public class PriceTransaction implements Transaction {
 	
 	private String line;

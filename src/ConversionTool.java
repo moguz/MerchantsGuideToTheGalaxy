@@ -5,8 +5,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 /**
- * Merchant's tool for conversion of units and numbers. It does input operations, parsing the transactions and
- * output queries.
+ * Merchant's tool for conversion of units and numbers. It does input operations, parsing and classifying 
+ * transactions, and output queries.
  * @author Mert
  *
  */
@@ -84,7 +84,14 @@ public class ConversionTool {
 			e.printStackTrace();
 		}
 	}
-
+	
+	/*Classifies each transaction into categories. These are:
+	 * 1-TranslationTransaction : "glob is I"
+	 * 2-PriceTransaction : "glob glob Silver is 34 Credits"
+	 * 3-TranslationQuestionTransaction : "how much is pish tegj glob glob ?"
+	 * 4-PriceQuestionTransaction : "how many Credits is glob prok Silver ?"
+	 * 5-WrongTransaction : Any query apart from these 4 categories and ends with a '?' (question mark).
+	 */
 	private void classifyTransaction(String line) {
 		if(line.matches("^\\w+ is [I,V,X,L,C,D,M]$")){
 			TranslationTransaction newTransaction = new TranslationTransaction(line);

@@ -1,4 +1,8 @@
-
+/**
+ * Makes the conversions between Galactic units, Roman numbers and decimals.
+ * @author Mert
+ *
+ */
 public class Converter {
 	
 	public static String convertGalacticToRoman(String galactic){

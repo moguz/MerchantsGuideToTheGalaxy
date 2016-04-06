@@ -1,4 +1,9 @@
-
+/**
+ * PriceQuestionTransaction: "how many Credits is glob prok Silver ?". This class processes the transaction 
+ * and generates the result.
+ * @author Mert
+ *
+ */
 public class PriceQuestionTransaction extends QuestionTransaction implements Transaction {
 
 	private String galactic;

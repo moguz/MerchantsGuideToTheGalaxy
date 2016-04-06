@@ -1,4 +1,9 @@
-
+/**
+ * Class for the transactions which need to be answered. This class is the superclass of
+ * TranslationQuestionTransaction, PriceQuestionTransaction and WrongTransaction.
+ * @author Mert
+ *
+ */
 public class QuestionTransaction {
 	
 	protected String line;

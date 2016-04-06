@@ -1,4 +1,8 @@
-
+/**
+ * TranslationTransaction: "pish is X". This class processes the transaction.
+ * @author Mert
+ *
+ */
 public class TranslationTransaction implements Transaction {
 	
 	private String line;

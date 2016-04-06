@@ -1,4 +1,9 @@
-
+/**
+ * TranslationQuestionTransaction: "how much is pish tegj glob glob ?". This class processes the transaction 
+ * and generates the result.
+ * @author Mert
+ *
+ */
 public class TranslationQuestionTransaction extends QuestionTransaction implements Transaction {
 
 	private String galactic;

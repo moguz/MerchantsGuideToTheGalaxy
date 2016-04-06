@@ -22,16 +22,14 @@ public class TranslationTransactionTest {
 	}
 
 	@Test
-	public void testValidInput() {
+	public void testProcessTransaction() {
 		String line = "glob is I";
 		prepare(line);
 		assertTrue(ConversionTool.galacticToRomanDictionary.get("glob")=='I');
-	}
-	
-	@Test
-	public void testWrongRoman() {
-		String line = "prop is II";
+		
+		line = "xxxxx is C";
 		prepare(line);
-		assertFalse(ConversionTool.galacticToRomanDictionary.containsKey("glob"));
+		System.out.println(ConversionTool.galacticToRomanDictionary.toString());
+		assertTrue(ConversionTool.galacticToRomanDictionary.get("xxxxx")=='C');
 	}
 }

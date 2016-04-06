@@ -4,7 +4,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Test class for PriceTranslation. Valid and invalid inputs are tested. Completely wrong inputs and empty inputs
+ * Test class for PriceTransaction. Valid and invalid inputs are tested. Completely wrong inputs and empty inputs
  * are already covered.
  * @author Mert
  *
@@ -24,23 +24,17 @@ public class PriceTransactionTest {
 	}
 
 	@Test
-	public void testValidInput() {
+	public void testProcessTransaction() {
 		String line = "glob glob Silver is 34 Credits";
 		prepare(line);
 		assertTrue(ConversionTool.materialPriceDictionary.get("Silver")==17);
-	}
-	
-	@Test
-	public void testValidLongMaterialName() {
-		String line = "glob glob Silver Bar is 34 Credits";
+		
+		line = "glob glob Silver Bar is 34 Credits";
 		prepare(line);
 		assertTrue(ConversionTool.materialPriceDictionary.get("Silver Bar")==17);
-	}
-	
-	@Test
-	public void testWrongGalactic() {
-		String line = "globs glob Silver is 34 Credits";
+		
+		line = "globs glob Gold is 34 Credits";
 		prepare(line);
-		assertFalse(ConversionTool.materialPriceDictionary.containsKey("Silver"));
+		assertFalse(ConversionTool.materialPriceDictionary.containsKey("Gold"));
 	}
 }
