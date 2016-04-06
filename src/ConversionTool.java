@@ -3,10 +3,13 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
-import java.util.Map;
-
+/**
+ * Merchant's tool for conversion of units and numbers. It does input operations, parsing the transactions and
+ * output queries.
+ * @author Mert
+ *
+ */
 public class ConversionTool {
 	private String filename;
 	
@@ -20,7 +23,6 @@ public class ConversionTool {
 	public static HashMap<String, Character> galacticToRomanDictionary;
 	public static HashMap<Character, Integer> romanToDecimalDictionary;
 	public static HashMap<String, Double> materialPriceDictionary;
-	public static int questionOrderId = 0;
 	
 	public ConversionTool(String filename){
 		this.filename = filename;
@@ -38,7 +40,7 @@ public class ConversionTool {
 		
 	}
 	
-		public void convert(){
+	public void convert(){
 		readFromInputFile();
 		processTransactions();
 		outputQuestionResults();

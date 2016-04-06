@@ -42,8 +42,9 @@ public class PriceTransaction implements Transaction {
 		if(materialQuantity > 0){
 			price = (double)cumulativePrice / materialQuantity;
 		}
-		
-		ConversionTool.materialPriceDictionary.put(materialName.trim(), price);
+		if(!materialName.isEmpty() && !galactic.isEmpty()){
+			ConversionTool.materialPriceDictionary.put(materialName.trim(), price);
+		}
 	}
 
 }

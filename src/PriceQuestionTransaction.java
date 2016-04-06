@@ -31,6 +31,10 @@ public class PriceQuestionTransaction extends QuestionTransaction implements Tra
 		if(Converter.isValidRoman(roman)){
 			materialQuantity = Converter.convertRomanToDecimal(roman);
 		}
+		else {
+			result = "I have no idea what you are talking about";
+			return;
+		}
 		if(isValid()){
 			result = galactic + " " + materialName + " is " +
 					(int)(materialQuantity*ConversionTool.materialPriceDictionary.get(materialName)) + " Credits";
